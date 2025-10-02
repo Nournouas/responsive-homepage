@@ -1,6 +1,301 @@
-h1{
-    font-family: "Playfair Display";
-    font-weight: bold;
-    font-size: 64px;
+h1,h2,h3,h4,h5,h6{
+    font-family: "Playfair dis";
+}
+p{
+    font-family: "Roboto";
 }
 
+body{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+:root {
+  --main-yellow: rgb(250, 247, 218);
+  --shadow: #828282;
+}
+
+h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.margin-bot-24{
+    margin-bottom: 24px;
+}
+
+.margin-bot-8{
+    margin-bottom: 8px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 35rem;
+    background-color: var(--main-yellow);
+    transform-origin: 0;
+    transform: skewY(-10deg);
+    box-shadow: 0rem 0.1rem 1rem var(--shadow);
+}
+
+header{
+    padding: 100px 0px;
+}
+
+.header-container{
+    margin: auto;
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    position: relative;
+    
+}
+
+main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    align-items: start;
+    padding: 100px 0px 100px 0px;
+}
+
+.hero-text-container{
+    padding: 15px 25px 15px 25px;
+    background-color: rgb(13, 24, 58);
+    color: whitesmoke;
+    box-shadow: 0rem 0.1rem 1rem var(--shadow);
+}
+
+.icon-container{
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: end;
+}
+
+.footer-icon-container{
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icon-container a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.icon-container a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.grid-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 350px;
+    box-shadow: 0rem 0.1rem 1rem var(--shadow);
+
+}
+
+.project-img{
+    max-height: 150px;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.project-title{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.project-text-container{
+    padding: 16px 16px;
+}
+
+.project-name-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.project-icon-container a{
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.project-icon-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-text-container p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer{
+    background-color: var(--main-yellow);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px;
+    min-width: 100%;
+}
+
+.footer-container{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left-footer-container{
+    min-width: 50%;
+}
+
+.right-footer-container{
+    min-width: 48%;
+}
+
+address{
+    margin-top: 16px;
+}
+
+.phone-number, .email-link{
+    text-decoration: none; 
+}
+
+.phone-number::before{
+    font-family: arial;
+    content: "🕻";
+    font-size: 24px;
+}
+
+.email-link::before{
+    font-family: arial;
+    content: "✉";
+    font-size: 20px;
+}
+
+.image-container{
+    background-image: url("./images/profile\ pic\ 1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-width: 400px;
+    min-height: 350px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    box-shadow: 0rem 0.1rem 1rem var(--shadow);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .header-container, main, .footer-container{
+        max-width: 90vw;
+    }
+
+    .footer-image{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    main{
+        padding-top: 0px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    .project-text-container p{
+        font-size: 16px;
+    }
+
+    .project-name-div h3{
+        font-size: 24px;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .header-container, main, .footer-container{
+        max-width: 90vw;
+    }
+
+    .footer-image{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    main{
+        padding-top: 0px;
+    }
+
+    .header-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-container{
+        min-width: 100%;
+    }
+
+    body::before {
+        height: 25rem;
+    }
+
+    .hero-text-container{
+        background-color: white;
+        box-shadow: none;
+        color: black;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    .project-text-container p{
+        font-size: 18px;
+    }
+
+    .project-name-div h3{
+        font-size: 24px;
+    }
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+}
